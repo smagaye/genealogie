@@ -10,8 +10,8 @@ import java.util.Collection;
 @Repository
     public interface PersonneRepository extends Neo4jRepository<Personne, Long> {
 
-        @Query("MATCH (u:Personne)-[r:marier]->(m:Personne) RETURN u,r,m")
-        Collection<Personne> getAllPersonnes();
+        @Query("MATCH (personnes:Personne) RETURN personnes")
+        Iterable<Personne> getAllPersonnes();
 
         @Query("MATCH (u:Personne)-[r:marier]->(m:Personne) RETURN u,r,m")
         Collection<Personne> getAllPersonnesMariees();

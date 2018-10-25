@@ -5,6 +5,7 @@ import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 import org.neo4j.ogm.annotation.typeconversion.DateString;
 
+import java.util.Date;
 import java.util.List;
 
 @NodeEntity
@@ -13,7 +14,7 @@ public class Personne {
     @GraphId
     private Long id;
 
-    private String idPersonne;
+    private String idpers;
 
     private String prenom;
 
@@ -23,11 +24,15 @@ public class Personne {
 
     private Integer codeAccess;
 
-    private String dateNaissance;
+    @DateString("yy-MM-dd")
+    private Date dateNaissance;
 
-    private String lieuNaissance;
+    @DateString("yy-MM-dd")
+    private Date dateInscription;
 
-    private String paysNaissance;
+    private String lieuDeNaissance;
+
+    private String pays;
 
     private String adresse;
 
@@ -35,7 +40,13 @@ public class Personne {
 
     private String email;
 
+    private String cin;
+
+    private String motPasse;
+
     private String nomUtilisateur;
+
+    private String photo;
 
     @Relationship(type = "marier", direction = Relationship.INCOMING)
     private List<Personne> conjoints;
@@ -78,14 +89,6 @@ public class Personne {
         this.peres = peres;
     }
 
-    public String getIdPersonne() {
-        return idPersonne;
-    }
-
-    public void setIdPersonne(String idPersonne) {
-        this.idPersonne = idPersonne;
-    }
-
     public String getPrenom() {
         return prenom;
     }
@@ -102,28 +105,28 @@ public class Personne {
         this.nom = nom;
     }
 
-    public String getDateNaissance() {
+    public Date getDateNaissance() {
         return dateNaissance;
     }
 
-    public void setDateNaissance(String dateNaissance) {
+    public void setDateNaissance(Date dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 
     public String getLieuNaissance() {
-        return lieuNaissance;
+        return lieuDeNaissance;
     }
 
     public void setLieuNaissance(String lieuNaissance) {
-        this.lieuNaissance = lieuNaissance;
+        this.lieuDeNaissance = lieuNaissance;
     }
 
-    public String getPaysNaissance() {
-        return paysNaissance;
+    public String getPays() {
+        return pays;
     }
 
-    public void setPaysNaissance(String paysNaissance) {
-        this.paysNaissance = paysNaissance;
+    public void setPaysNaissance(String pays) {
+        this.pays = pays;
     }
 
     public String getAdresse() {
@@ -174,5 +177,55 @@ public class Personne {
         this.motPasse = motPasse;
     }
 
-    private String motPasse;
+    public String getIdpers() {
+        return idpers;
+    }
+
+    public void setIdpers(String idpers) {
+        this.idpers = idpers;
+    }
+
+    public Date getDateInscription() {
+        return dateInscription;
+    }
+
+    public void setDateInscription(Date dateInscription) {
+        this.dateInscription = dateInscription;
+    }
+
+    public List<Personne> getConjoints() {
+        return conjoints;
+    }
+
+    public void setConjoints(List<Personne> conjoints) {
+        this.conjoints = conjoints;
+    }
+
+    public String getLieuDeNaissance() {
+        return lieuDeNaissance;
+    }
+
+    public void setLieuDeNaissance(String lieuDeNaissance) {
+        this.lieuDeNaissance = lieuDeNaissance;
+    }
+
+    public String getCin() {
+        return cin;
+    }
+
+    public void setCin(String cin) {
+        this.cin = cin;
+    }
+
+    public void setPays(String pays) {
+        this.pays = pays;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
+    }
 }

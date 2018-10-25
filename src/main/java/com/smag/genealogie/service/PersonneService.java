@@ -12,7 +12,11 @@ public class PersonneService {
     @Autowired
     PersonneRepository personneRepository;
 
-    public Collection<Personne> getPersonnes(){
-       return personneRepository.getAllPersonnes();
+    public Collection<Personne> getAllPersonnesMariees(){
+       return personneRepository.getAllPersonnesMariees();
+    }
+
+    public Iterable<Personne> getAllPersonnes(){
+        return personneRepository.getAllPersonnes();
     }
 }

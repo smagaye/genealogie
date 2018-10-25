@@ -6,7 +6,10 @@
   <title>FindFamily</title>
 
   <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'/>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'/>
+
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="stylesheet" href="css/slideshow.css">
@@ -19,15 +22,15 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="./pages/LoginForm/login.html">Se connecter</a></li>
         <li><a href="#">Forum</a></li>
-        <li><a href="#">Découvertes</a></li>
+        <li><a href="./pages/Decouverte/decouverte.html">Découvertes</a></li>
         <li><a href="./pages/ContactFrom/contact.html">Contact</a></li>
       </ul>
 
       <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Se connecter</a></li>
+        <li><a href="./pages/LoginForm/login.html">Se connecter</a></li>
         <li><a href="#">Forum</a></li>
-        <li><a href="#">Découvertes</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="./pages/Decouverte/decouverte.html">Découvertes</a></li>
+        <li><a href="./pages/ContactFrom/contact.html">Contact</a></li>
       </ul>
       <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     </div>
@@ -58,7 +61,7 @@
             <div class="caption">
               <div class="title">Généalogie</div>
               <div class="text">
-                <p>Slide description 2</p>
+                <p>Découvrir ses ascendants les plus anciens</p>
               </div> 
               <a href="#" class="btn">
                 <span class="btn-inner">S'inscrire</span>
@@ -72,9 +75,9 @@
         <div class="slide">
           <div class="slide-content">
             <div class="caption">
-              <div class="title">Slide title 3</div>
+              <div class="title">Famille</div>
               <div class="text">
-                <p>Slide description 3</p>
+                <p>Rien est plus beau que la famille.</p>
               </div> 
               <a href="pages/Inscription/inscription.html" class="btn">
                 <span class="btn-inner">S'inscrire</span>
@@ -88,9 +91,9 @@
         <div class="slide">
           <div class="slide-content">
             <div class="caption">
-              <div class="title">Slide title 4</div>
+              <div class="title">Proches</div>
               <div class="text">
-                <p>Slide description 4</p>
+                <p>Ces personnes me sont liées à vie.</p>
               </div> 
               <a href="pages/Inscription/inscription.html" class="btn">
                 <span class="btn-inner">S'inscrire</span>
@@ -169,7 +172,25 @@
     </div>
   </div>
 
-  <div class="container">
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <!--h1 class="header center teal-text text-lighten-2">Parallax 2</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
+        </div-->
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="images/parallax1.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+  <div  style="margin-bottom: 90px;" class="container">
     <div class="section">
       <!--   Icon Section   -->
       <div class="row">
@@ -203,24 +224,112 @@
 
     </div>
   </div>
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Parallax 2</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a>
-        </div>
-        <br><br>
 
+  <div id="index-banner1" class="parallax-container">
+    <section class="black">
+      <div class="carousel carousel-slider" data-indicators="true">
+        <div class="carousel-fixed-item">
+          <div class="container">
+            <!--h1 class="white-text">Publicité</h1-->
+          </div>
+        </div>
+        <div class="carousel-item red lighten-2 white-text" style="background-image: url('images/c1.jpg'); background-size: cover;" href="#one!">
+          <div class="container">
+            <!--h2>First Slide</h2>
+            <p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille qui m'a sans doute beaucoup aidé dans l'ée processus de découvertee ma lignée.. familiale</p-->
+          </div>
+        </div>
+        <div class="carousel-item amber darken-2 white-text" style="background-image: url('images/c2.jpg'); background-size: cover;" href="#two!">
+          <div class="container">
+            <!--h2>Second Slide</h2-->
+            <!--p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille qui m'a sans doute beaucoup aidé dans l'ée processus de découvertee ma lignée.. familiale</p-->
+          </div>
+        </div>
+        <div class="carousel-item green white-text" style="background-image: url('images/c3.jpg'); background-size: cover;" href="#three!">
+          <div class="container">
+            <!--h2>Third Slide</h2-->
+            <!--p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille qui m'a sans doute beaucoup aidé dans l'ée processus de découvertee ma lignée.. familiale</p-->
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="parallax"><img src="images/parallax1.jpg" alt="Unsplashed background img 1"></div>
+    </section>
+    <!-- Gitter Chat Link -->
+    <!--div class="fixed-action-btn"><a class="btn-floating btn-large red" href="#"><i class="large material-icons">chat</i></a></div-->
   </div>
 
+  <section id="counter-stats" class="wow fadeInRight" data-wow-duration="1.4s">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-6 col-md-6 stats">
+          <h2 class="center blue-text"><i class="material-icons ici">group</i></h2>
+          <div class="counting" data-count="984510">0</div>
+          <h5>Population</h5>
+        </div>
+
+        <div class="col-lg-6 stats col-md-6">
+          <h2 class="center blue-text"><i class="material-icons ici">account_circle</i></h2>
+          <div class="counting" data-count="280">0</div>
+          <h5>Utilisateurs</h5>
+        </div>
+
+        <div class="col-lg-6 stats col-md-6">
+          <h2 class="center blue-text"><i class="material-icons ici">home</i></h2>
+          <div class="counting" data-count="75">0</div>
+          <h5>Familles</h5>
+        </div>
+
+        <div class="col-lg-6 col-md-6 stats">
+          <h2 class="center blue-text"><i class="material-icons ici">thumbs_up_down</i></h2>
+          <div class="counting" data-count="27">0</div>
+          <h5>Sponsors</h5>
+        </div>
+
+
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+
+  </section>
+
+  <div id="index-banner2" class="parallax-container">
+    <section class="black">
+      <div class="carousel carousel-slider" data-indicators="true">
+        <div class="carousel-fixed-item">
+          <div class="container">
+            <!--h3 class="white-text large">Témoignage</h3-->
+          </div>
+        </div>
+        <div class="carousel-item blue lighten-2 white-text" href="#one!">
+          <div class="container">
+            <h2>Céline Fall <i class="large material-icons">chat</i></h2>
+            <p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille <br/>qui m'a sans doute beaucoup aidé dans le processus de <br/>découverte de ma lignée familiale. Grâce cette plateforme, <br/>nous avions retrouvé nos ancêtre qui vivaient en Indonésie.<br/> Et je doute que sans cet outil ceci sera possible.</p>
+          </div>
+        </div>
+        <div class="carousel-item amber darken-2 white-text" href="#two!">
+          <div class="container">
+            <h2>Adama Touré <i class="large material-icons">chat</i></h2>
+            <p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille <br/>qui m'a sans doute beaucoup aidé dans le processus de <br/>découverte de ma lignée familiale. Grâce cette plateforme, <br/>nous avions retrouvé nos ancêtre qui vivaient en Indonésie.<br/> Et je doute que sans cet outil ceci sera possible.</p>
+          </div>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+          <div class="container">
+            <h2>Moustapha Seydi <i class="large material-icons">chat</i></h2>
+            <p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille <br/>qui m'a sans doute beaucoup aidé dans le processus de <br/>découverte de ma lignée familiale. Grâce cette plateforme, <br/>nous avions retrouvé nos ancêtre qui vivaient en Indonésie.<br/> Et je doute que sans cet outil ceci sera possible.</p>
+          </div>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+          <div class="container">
+            <h2>Anta Mbaye <i class="large material-icons">chat</i></h2>
+            <p class="white-text">Je tiens à féliciter les gens qui ont mis en place cette merveille <br/>qui m'a sans doute beaucoup aidé dans le processus de <br/>découverte de ma lignée familiale. Grâce cette plateforme, <br/>nous avions retrouvé nos ancêtre qui vivaient en Indonésie.<br/> Et je doute que sans cet outil ceci sera possible.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Gitter Chat Link -->
+    <!--div class="fixed-action-btn"><a class="btn-floating btn-large red" href="#"><i class="large material-icons">chat</i></a></div-->
+  </div>
 
   <div class="container">
     <div class="section">
@@ -230,103 +339,64 @@
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">flash_on</i></h2>
-            <h5 class="center">Speeds up development</h5>
+            <h5 class="center">Accès rapide</h5>
 
-            <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+            <p class="light">Nous avons fait le gros du travail pour vous fournir un style par défaut qui intègre nos composants personnalisés. De plus, nous avons affiné les animations et les transitions pour offrir une navigation plus fluide.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+            <h5 class="center">Experience</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally.</p>
+            <p class="light">
+              En utilisant des éléments et des principes de conception matérielle, nous avons pu créer un cadre incorporant des composants et des animations qui fournissent davantage de commentaires aux utilisateurs.</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
             <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
-
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <h5 class="center">Utilisation facile</h5>
+            <p class="light">
+              Nous avons fourni une documentation détaillée ainsi que des exemples spécifiques pour aider les nouveaux utilisateurs à démarrer. Nous sommes également toujours ouverts aux commentaires et aux questions.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">Text Parallax</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/parallax2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="images/parallax3.jpeg" alt="Unsplashed background img 3"></div>
-  </div>
-
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">Find Family</h5>
+          <p class="grey-text text-lighten-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros.</p>
 
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Partenaires</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">Tigo</a></li>
+            <li><a class="white-text" href="#!">CCBM</a></li>
+            <li><a class="white-text" href="#!">Trader Shop</a></li>
+            <li><a class="white-text" href="#!">EMG auto</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">Liens utiles</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="#!">Geneafrance</a></li>
+            <li><a class="white-text" href="#!">Conficius family</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Copyright <a class="brown-text text-lighten-3" href="#">Smag from Aarujob</a>
+      Copyright <a class="white-text text-lighten-3" href="#">Smag from Aarujob</a>
       </div>
     </div>
   </footer>
@@ -334,11 +404,14 @@
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
+  <script  src="js/slideshow.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
- <script  src="js/slideshow.js"></script>
 
   </body>
 </html>

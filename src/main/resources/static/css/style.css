@@ -55,3 +55,43 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+/* Statistiques */
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+
+#counter-stats {
+  background: #ffffff;
+}
+
+/*/ start count stats /*/
+
+section #counter-stats {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.stats {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.stats .fa {
+  color: #008080;
+  font-size: 60px;
+}
+
+.h2{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ici{
+  font-size: 70px;
+}
+
+
+/*/ end count stats */

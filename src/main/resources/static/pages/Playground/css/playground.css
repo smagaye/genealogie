@@ -20,14 +20,15 @@ body {
 
 .col-1 {
   width: 33.333%;
-  padding: 0 15px;
+  padding: 30px 30px;
   float: left;
 }
 
 .col-2 {
   width: 66.666%;
-  padding: 0 15px;
+  padding: 30px 30px;
   float: left;
+  height: 100%;
 }
 
 .col-3 {

@@ -18,16 +18,18 @@ $(function(){
 		$(this).parent().prevAll().addClass('checked');
 		$(this).parent().nextAll().removeClass('checked');
 
-        var e="1. 2. 3. current step: 4. ";
+        var e="1. 2. 3. 4. current step: 5. ";
         var x = $('.wizard > .steps').text();
         if(e==x){
-            alert(x);
-              $('#wizard').submit();
+
+            swal("Veuillez consultez votre messagerie pour les informations de connexion!")
+                .then((value)=>{
+                $("#wizard").submit();
+            });
         }
     });
     // Custome Jquery Step Button
     $('.forward').click(function(){
-        //alert("forward")
     	$("#wizard .labels").steps('next');
     })
     

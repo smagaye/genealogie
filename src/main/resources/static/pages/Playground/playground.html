@@ -15,8 +15,9 @@
   <link rel="stylesheet" href="css/playground.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gojs/1.8.31/go-debug.js"></script>
   <script type="text/javascript" src="js/ForceDirected.js"></script>
+  <script type="text/javascript" src="js/orgEditor.js"></script>
 </head>
-<body onload="init()">
+<body onload="init(); initEditor();">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#" class="brand-logo">logo</a>
@@ -44,11 +45,15 @@
         <div class="site-wrapper_left-col">
           <!--a href="#" class="logo">Logo</a-->
           <div class="left-nav">
-            <a href="#" class="nb" id="tag1"><i class="fa fa-home"></i>Home</a>
-            <a href="#" class="nb" id="tag2"><i class="fa fa-pie-chart"></i>Dashboard</a>
-            <a href="#" class="nb" id="tag3"><i class="fa fa-user"></i>Profile</a>
-            <a href="#" class="nb" id="tag4"><i class="fa fa-comment"></i>Question</a>
-            <a href="#" class="nb" id="tag5"><i class="fa fa-cog"></i>Settings</a>
+            <a href="#" class="nb" id="tag2"><i class="fa fa-home"></i>Home</a>
+            <a href="#" class="nb" id="tag1"><i class="fa fa-pie-chart"></i>Dashboard</a>
+            <a href="#" class="nb" id="tag3"><i class="fa fa-user"></i>Ma généalogie</a>
+            <a href="#" class="nb" id="tag4"><i class="fa fa-search"></i>Exploration</a>
+            <a href="https://buffer.com/add?url=https://simplesharebuttons.com&text=Simple%20Share%20Buttons" target="_blank"><i class="fa fa-share"></i>Partager</a>
+            <a href="#" class="nb" id="tag5"><i class="fa fa-comments"></i>Chat</a>
+            <a href="../../conversation.html" target="_blank"><i class="fa fa-comment"></i>Commentaires</a>
+            <a href="javascript:;" onclick="window.print()"><i class="fa fa-print"></i>Imprimer</a>
+            <a href="#" class="nb" id="tag7"><i class="fa fa-cog"></i>Settings</a>
           </div>
         </div>
         <div class="site-wrapper_top-bar">
@@ -66,14 +71,142 @@
               </div>
             </div>
           </div>
-        </div>
-        <!-- end inner content -->
+          <div class="container block blocksec" id="block4" style="background-color:mediumvioletred; height: 600px; width: 100%;">
+            <div id="sampleEditor">
+              <div id="myDiagramDivEditor" style="background-color: #ffffff; border: solid 1px black; height: 600px"></div>
+              <div>
+                <div id="myInspector" class="inspector"></div>
+              </div>
+                  <div>
+                    <textarea id="mySavedModelEditor" style="width:100%;height:250px">{ "class": "go.TreeModel",
+                          "nodeDataArray": [
+                        {"key":1, "name":"Famille", "title":"F32030"},
+                        {"key":2, "name":"Luke Warm", "title":"pere", "parent":1},
+                        {"key":3, "name":"Meg Meehan Hoffa", "title":"mere", "parent":2},
+                        {"key":4, "name":"Peggy Sarr", "title":"mere", "parent":1},
+                        {"key":5, "name":"Saul Wellingood", "title":"enfant", "parent":4},
+                        {"key":6, "name":"Al Ligori", "title":"enfant", "parent":2},
+                        {"key":7, "name":"Dot Stubadd", "title":"enfant", "parent":3},
+                        {"key":8, "name":"Les Ismore", "title":"Project Mgr", "parent":5},
+                        {"key":9, "name":"April Lynn Parris", "title":"Events Mgr", "parent":6},
+                        {"key":10, "name":"Xavier Breath", "title":"enfant", "parent":4},
+                        {"key":11, "name":"Anita Hammer", "title":"enfant", "parent":5},
+                        {"key":12, "name":"Billy Aiken", "title":"enfant", "parent":10},
+                        {"key":13, "name":"Stan Wellback", "title":"enfant", "parent":10},
+                        {"key":14, "name":"Marge Innovera", "title":"enfant", "parent":10},
+                        {"key":15, "name":"Evan Elpus", "title":"enfant", "parent":5},
+                        {"key":16, "name":"Lotta B. Essen", "title":"enfant", "parent":3}
+                         ]
+                        }
+                    </textarea>
+              </div>
+          </div>
+          </div>
+          <div class="container row block blocksec" id="block5" style="background-color:lightskyblue; height: 600px; width: 100%;">
+                <div class="col-1 col-md-3 col-sm-12">
+              <div class="user-item">
+                <div class="user-item_photo">
+                  <img src="http://cs627618.vk.me/v627618825/c092/8fhljOvdiEs.jpg" alt="myphoto" />
+                </div>
+                <div class="user-item_info">
+                  <p class="name">Stanislav Golts</p>
+                  <p class="sub">Front-End developer</p>
+                  <div class="controls">
+                    <a href="#"><i class="fa fa-camera"></i></a>
+                    <a href="#"><i class="fa fa-pencil"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+                <div class="col-2 col-md-6 col-sm-12">
+              <div class="chat">
+                <div class="head">
+                  <i class="fa fa-comment"></i>
+                  Message
+                </div>
+                <div class="chat_inner">
+                  <div class="chat_inner-item">
+                    <div class="photo">
+                      <img src="http://cs627618.vk.me/v627618825/c092/8fhljOvdiEs.jpg" alt="myphoto" />
+                    </div>
+                    <div class="message">
+                      Hello, World!
+                    </div>
+                  </div>
+                  <div class="chat_inner-item right">
+                    <div class="message">
+                      Hello, World!
+                    </div>
+                    <div class="photo">
+                      <img src="http://cs627618.vk.me/v627618825/c092/8fhljOvdiEs.jpg" alt="myphoto" />
+                    </div>
+                  </div>
+                  <div class="chat_inner-item">
+                    <div class="photo">
+                      <img src="http://cs627618.vk.me/v627618825/c092/8fhljOvdiEs.jpg" alt="myphoto" />
+                    </div>
+                    <div class="message">
+                      Hello, World!
+                    </div>
+                  </div>
+                </div>
+                <div class="footer">
+                  <input type="text" placeholder="Your Message">
+                  <button><i class="fa fa-paper-plane"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container row block blocksec" id="block6" style="background-color:lightskyblue; height: 600px; width: 100%;">
+             <div class="row" id="username-page">
+                 <div class="username-page-container">
+                     <h1 class="title">Saisissez votre nom d'utilisateur</h1>
+                     <form id="usernameForm" name="usernameForm">
+                         <div class="form-group">
+                             <input type="text" id="name" placeholder="Nom d'utilisateur" autocomplete="off" class="form-control" />
+                         </div>
+                         <div class="form-group">
+                             <input type="password" id="pass" placeholder="Password" autocomplete="off" class="form-control" />
+                         </div>
+                         <div class="form-group">
+                             <button type="submit" class="accent username-submit">Démarrer discussion</button>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+             <div class="row" id="chat-page" class="hidden">
+                 <div class="chat-container">
+                     <div class="chat-header">
+                         <h2>Discussion</h2>
+                     </div>
+                     <div class="connecting">
+                         Connecting...
+                     </div>
+                     <ul id="messageArea">
+
+                     </ul>
+                     <form id="messageForm" name="messageForm" nameForm="messageForm">
+                         <div class="form-group">
+                             <div class="input-group clearfix">
+                                 <input type="text" id="message" placeholder="Type a message..." autocomplete="off" class="form-control"/>
+                                 <button type="submit" class="primary">Envoyer</button>
+                             </div>
+                         </div>
+                     </form>
+                 </div>
+             </div>
+          </div>
+          <!-- end inner content -->
       </div>
       <!-- end content -->
     </div>
+
   </div>
 
-  <footer class="page-footer teal">
+
+    </div>
+
+  <footer class="page-footer teal" style="margin-top: 80px;">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -113,16 +246,50 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
 
+
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
   <script src="../../js/materialize.js"></script>
   <script src="js/playground.js"></script>
   <script>
+      $(document).ready(function(){
+          $('.nb').click(function(){
 
-    $(document).ready(function(){
-        $(".block").hide();
-        $("#block3").show();
+              var x = this.getAttribute('id');
+             //
+              if(x=="tag1"){
+                  $(".block").fadeOut();
+                  $('#block1').fadeIn(800);
+              }
+              if(x=="tag2"){
+                  $(".block").fadeOut();
+                  $('#block2').fadeIn(800);
+              }
+              if(x=="tag3"){
+                  $(".block").fadeOut();
+                  $('#block3').fadeIn(800);
+              }
+              if(x=="tag4"){
+                  $(".block").fadeOut();
+                  $('#block4').fadeIn(1200);
+              }
+              if(x=="tag5"){
+                  $(".block").fadeOut();
+                  $('#block5').fadeIn(1200);
+              }
 
-    });
+          });
+
+          $(function(){
+              $('#toggle').click(function(){
+                  $('#target').toggleClass('active');
+              });
+          });
+
+          $('#mySavedModelEditor').hide();
+          //$('.blocksec').hide();
+
+      });
+
   </script>
 
   </body>

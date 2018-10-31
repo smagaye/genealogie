@@ -17,6 +17,19 @@ public class PersonneService {
     }
 
     public Iterable<Personne> getAllPersonnes(){
-        return personneRepository.getAllPersonnes();
+        return personneRepository.getAllPersonnesMariees();
+    }
+
+    public Personne getPersonneById(String id){
+        return personneRepository.getPersonneByIdpers(id);
+    }
+
+    public Personne getPersonneByEmail(String id){
+        return personneRepository.getPersonneByEmail(id);
+    }
+
+    public Personne getPersonneByPrenom(String id){
+
+        return personneRepository.getPersonneByPrenom(id);
     }
 }

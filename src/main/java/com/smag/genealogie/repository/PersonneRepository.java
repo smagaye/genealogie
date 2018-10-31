@@ -16,4 +16,11 @@ import java.util.Collection;
         @Query("MATCH (u:Personne)-[r:marier]->(m:Personne) RETURN u,r,m")
         Collection<Personne> getAllPersonnesMariees();
 
+
+        Personne getPersonneByPrenom(String id);
+
+        Personne getPersonneByEmail(String id);
+
+        Personne getPersonneByIdpers(String id);
+
 }

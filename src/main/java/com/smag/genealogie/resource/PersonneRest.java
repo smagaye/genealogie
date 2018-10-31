@@ -29,4 +29,14 @@ public class PersonneRest {
         return (personne==null? new Personne():personne);
     }
 
+    @RequestMapping(value="/emails/{email}", method = RequestMethod.GET)
+    public Personne getPersonneByEmail(@PathVariable("email")  String email){
+        Personne personne=null;
+        try {
+            personne = personneService.getPersonneById(email);
+        }catch (Exception ex){}
+
+        return (personne==null? new Personne():personne);
+    }
+
 }

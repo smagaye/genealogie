@@ -7,7 +7,9 @@ import org.neo4j.ogm.annotation.typeconversion.DateString;
 
 import java.util.Date;
 import java.util.List;
-
+/*
+    class for Personne table
+*/
 @NodeEntity
 public class Personne {
 

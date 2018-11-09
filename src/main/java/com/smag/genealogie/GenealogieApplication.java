@@ -7,6 +7,9 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 public class GenealogieApplication extends SpringBootServletInitializer {
+    /*
+        for bootstraping the app
+    */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
         return super.configure(builder);

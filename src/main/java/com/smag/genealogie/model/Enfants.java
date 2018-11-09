@@ -5,7 +5,7 @@ import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 import java.util.List;
 /*
-    Model for table Enfant
+    Model for Enfant table
 */
 @NodeEntity
 public class Enfants {

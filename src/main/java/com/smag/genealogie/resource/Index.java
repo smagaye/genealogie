@@ -11,4 +11,7 @@ public class Index {
     @GetMapping ("/")public String home(){
         return "index.html";
     }
+    @GetMapping ("/genealogie/")public String home1(){
+        return "index.html";
+    }
 }

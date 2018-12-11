@@ -7,7 +7,7 @@
     <groupId>com.smag</groupId>
     <artifactId>genealogie</artifactId>
     <version>1.0</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
 
     <name>genealogie</name>
     <description>Project Généalogie réalisé avec la technologie Spring 1.5.14</description>
@@ -71,14 +71,14 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
             <plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-surefire-plugin</artifactId>
-  <configuration>
-    <forkCount>3</forkCount>
-    <reuseForks>true</reuseForks>
-    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
-  </configuration>
-</plugin>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-surefire-plugin</artifactId>
+                  <configuration>
+                    <forkCount>3</forkCount>
+                    <reuseForks>true</reuseForks>
+                    <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>
+                  </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

@@ -18,6 +18,6 @@ public class GenealogieApplication extends SpringBootServletInitializer {
     the first called method 
     */
     public static void main(String[] args) {
-        SpringApplication.run(GenealogieApplication.class, args);
+        SpringApplication.run(GenealogieApplication.class, args)
     }
 }
